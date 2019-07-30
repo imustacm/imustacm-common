@@ -12,38 +12,38 @@ import lombok.Data;
  */
 @Data
 public class Resp<T> {
-    private String code;
-    private String msg;
+    private int status;
+    private String message;
     private T data;
 
     public Resp() {
 
     }
 
-    public Resp(String code, String msg) {
-        this.code = code;
-        this.msg = msg;
+    public Resp(int status, String message) {
+        this.status = status;
+        this.message = message;
     }
 
-    public Resp(String code, String msg, T data) {
-        this.code = code;
-        this.msg = msg;
+    public Resp(int status, String message, T data) {
+        this.status = status;
+        this.message = message;
         this.data = data;
     }
 
     public Resp(ErrorCodeEnum codeEnum) {
-        this.code = codeEnum.getCode();
-        this.msg = codeEnum.getMsg();
+        this.status = codeEnum.getStatus();
+        this.message = codeEnum.getMessage();
     }
 
-    public Resp(ErrorCodeEnum codeEnum, String msg) {
-        this.code = codeEnum.getCode();
-        this.msg = msg;
+    public Resp(ErrorCodeEnum codeEnum, String message) {
+        this.status = codeEnum.getStatus();
+        this.message = message;
     }
 
     public Resp(ErrorCodeEnum codeEnum, T data) {
-        this.code = codeEnum.getCode();
-        this.msg = codeEnum.getMsg();
+        this.status = codeEnum.getStatus();
+        this.message = codeEnum.getMessage();
         this.data = data;
     }
 
