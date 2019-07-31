@@ -36,7 +36,8 @@ public enum ErrorCodeEnum {
     USER_REPASSWORD_EMPTY(1008, "重复密码不能为空"),
     USER_INCONSISTENT_PASSWORDS(1009, "两次密码输入不一致"),
     USER_NAME_EMPTY(1010, "姓名不能为空"),
-    USER_USER_EXIST(1011, "用户名已经被使用");
+    USER_USER_EXIST(1011, "用户已经存在"),
+    USER_USERINFO_ERROR(1012, "用户名或密码错误");
 
     private int status;
     private String message;
