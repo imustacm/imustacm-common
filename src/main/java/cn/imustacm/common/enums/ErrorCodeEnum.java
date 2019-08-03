@@ -45,5 +45,4 @@ public enum ErrorCodeEnum {
 
     private int status;
     private String message;
-
 }
