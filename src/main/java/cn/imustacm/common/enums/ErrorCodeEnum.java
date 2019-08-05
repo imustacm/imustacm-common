@@ -41,7 +41,9 @@ public enum ErrorCodeEnum {
     USER_USER_EXIST(1012, "用户已经存在"),
     USER_USERINFO_ERROR(1013, "用户名或密码错误"),
     USER_EMAIL_ILLEGAL(1014, "Email格式不合法"),
-    USER_EMAIL_SEND_ERROR(1015, "邮件发送失败");
+    USER_EMAIL_SEND_ERROR(1015, "邮件发送失败"),
+    USER_EMAIL_SEND_TIME(1016, "邮件发送过于频繁");
+
 
     private int status;
     private String message;
