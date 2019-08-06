@@ -27,8 +27,8 @@ public enum ErrorCodeEnum {
      * 用户服务类错误码
      */
     USER_LOGIN_STATUS(1000, "请重新登录"),
-    USER_VERIFICATION_EXPIRED(1001, "验证码已过期"),
-    USER_VERIFICATION_EMPTY(1002, "验证码不正确"),
+    USER_VERIFICATION_EXPIRED(1001, "验证码无效或者验证码已过期"),
+    USER_VERIFICATION_EMPTY(1002, "验证码不能为空"),
     USER_VERIFICATION_ERROR(1003, "验证码不正确"),
     USER_USERNAME_EMPTY(1004, "用户名不能为空"),
     USER_USERNAME_ILLEGAL(1005, "用户名格式不合法"),
@@ -42,8 +42,8 @@ public enum ErrorCodeEnum {
     USER_USERINFO_ERROR(1013, "用户名或密码错误"),
     USER_EMAIL_ILLEGAL(1014, "Email格式不合法"),
     USER_EMAIL_SEND_ERROR(1015, "邮件发送失败"),
-    USER_EMAIL_SEND_TIME(1016, "邮件发送过于频繁");
-
+    USER_EMAIL_SEND_TIME(1016, "邮件发送过于频繁"),
+    USER_EMAIL_LINK_ILLEGAL(1017, "邮箱验证链接无效或者链接已过期");
 
     private int status;
     private String message;
