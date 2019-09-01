@@ -9,13 +9,7 @@ import com.fasterxml.jackson.databind.SerializerProvider;
 import java.io.IOException;
 import java.time.LocalDateTime;
 
-/**
- * Local Date Time Serializable
- *
- * @author heihaier@mmears.com
- * Date: 2018/8/28
- * Time: 下午5:47
- */
+
 public class LocalDateTimeJsonSerializable extends JsonSerializer<LocalDateTime> {
 
     @Override
