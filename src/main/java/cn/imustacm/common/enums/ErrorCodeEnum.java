@@ -43,7 +43,9 @@ public enum ErrorCodeEnum {
     USER_EMAIL_ILLEGAL(1014, "Email格式不合法"),
     USER_EMAIL_SEND_ERROR(1015, "邮件发送失败"),
     USER_EMAIL_SEND_TIME(1016, "邮件发送过于频繁"),
-    USER_EMAIL_LINK_ILLEGAL(1017, "邮箱验证链接无效或者链接已过期");
+    USER_EMAIL_LINK_ILLEGAL(1017, "邮箱验证链接无效或者链接已过期"),
+    USER_AAO_URL_ILLEGAL(1018, "与教务系统通讯失败"),
+    USER_AAO_VERIFICATION_GET(1019, "验证码拉取失败");
 
     private int status;
     private String message;
