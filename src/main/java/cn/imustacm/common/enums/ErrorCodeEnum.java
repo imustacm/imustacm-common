@@ -45,7 +45,11 @@ public enum ErrorCodeEnum {
     USER_EMAIL_SEND_TIME(1016, "邮件发送过于频繁"),
     USER_EMAIL_LINK_ILLEGAL(1017, "邮箱验证链接无效或者链接已过期"),
     USER_AAO_URL_ILLEGAL(1018, "与教务系统通讯失败"),
-    USER_AAO_VERIFICATION_GET(1019, "验证码拉取失败");
+    USER_AAO_VERIFICATION_GET(1019, "验证码拉取失败"),
+
+    PROBLEM_SUBMIT_LANGUAGE_NULL(2000, "提交的代码语言不能为空"),
+    PROBLEM_SUBMIT_CODE_NULL(2001, "提交的代码不能为空"),
+    PROBLEM_SUBMIT_SERVER_ERROR(2002, "判题机接口错误");
 
     private int status;
     private String message;
