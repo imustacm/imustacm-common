@@ -48,8 +48,11 @@ public enum ErrorCodeEnum {
     USER_AAO_VERIFICATION_GET(1019, "验证码拉取失败"),
 
     PROBLEM_SUBMIT_LANGUAGE_NULL(2000, "提交的代码语言不能为空"),
-    PROBLEM_SUBMIT_CODE_NULL(2001, "提交的代码不能为空"),
-    PROBLEM_SUBMIT_SERVER_ERROR(2002, "判题机接口错误");
+    PROBLEM_SUBMIT_LANGUAGE_ERROR(2001, "提交的代码语言错误"),
+    PROBLEM_SUBMIT_CODE_NULL(2002, "提交的代码不能为空"),
+    PROBLEM_SUBMIT_SERVER_ERROR(2003, "判题机接口错误"),
+    PROBLEM_NOT_EXIST(2004, "题目不存在"),
+    PROBLEM_TESTDATA_NOT_EXIST(2005, "管理员尚未添加测试数据");
 
     private int status;
     private String message;
