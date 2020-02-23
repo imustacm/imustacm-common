@@ -108,6 +108,17 @@ public class JwtUtils {
         return getClaimFromToken(token).getExpiration();
     }
 
+    /**
+     * 判断token是否过期
+     *
+     * @param token
+     * @return
+     */
+    public boolean tokenExpiredStatus(String token) {
+        Date expiration = getExpiration(token);
+        return expiration.after(new Date());
+    }
+
     public Map<String, Claim> verifyToken(String token) {
         Algorithm algorithm = Algorithm.HMAC256(this.secret);
         JWTVerifier verifier = JWT.require(algorithm)

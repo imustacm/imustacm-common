@@ -46,6 +46,8 @@ public enum ErrorCodeEnum {
     USER_EMAIL_LINK_ILLEGAL(1017, "邮箱验证链接无效或者链接已过期"),
     USER_AAO_URL_ILLEGAL(1018, "与教务系统通讯失败"),
     USER_AAO_VERIFICATION_GET(1019, "验证码拉取失败"),
+    USER_TOKEN_NULL(1020,"token为null"),
+    USER_TOKEN_EXPIRED(1021,"token已过期"),
 
     PROBLEM_SUBMIT_LANGUAGE_NULL(2000, "提交的代码语言不能为空"),
     PROBLEM_SUBMIT_LANGUAGE_ERROR(2001, "提交的代码语言错误"),
