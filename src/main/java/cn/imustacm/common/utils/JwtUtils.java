@@ -68,7 +68,7 @@ public class JwtUtils {
         JwtBuilder jwtBuilder = Jwts.builder()
                 .setClaims(claims)
                 .setSubject(userId)
-                .signWith(SignatureAlgorithm.ES256, secret);
+                .signWith(SignatureAlgorithm.HS256, secret);
         if (ttl > 0) {
             jwtBuilder.setExpiration(new Date(nowMillis + ttl));
         }
