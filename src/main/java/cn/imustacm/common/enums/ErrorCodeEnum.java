@@ -57,6 +57,6 @@ public enum ErrorCodeEnum {
     PROBLEM_NOT_EXIST(2004, "题目不存在"),
     PROBLEM_TESTDATA_NOT_EXIST(2005, "管理员尚未添加测试数据");
 
-    private int status;
-    private String message;
+    private int code;
+    private String msg;
 }
