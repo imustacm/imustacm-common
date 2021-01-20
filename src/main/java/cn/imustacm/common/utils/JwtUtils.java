@@ -7,10 +7,7 @@ import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.interfaces.Claim;
 import com.auth0.jwt.interfaces.DecodedJWT;
 import com.google.common.collect.Maps;
-import io.jsonwebtoken.Claims;
-import io.jsonwebtoken.JwtBuilder;
-import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.SignatureAlgorithm;
+import io.jsonwebtoken.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -92,10 +89,16 @@ public class JwtUtils {
      * @return
      */
     public Claims getClaimFromToken(String token) {
-        return Jwts.parser()
-                .setSigningKey(this.secret)
-                .parseClaimsJws(token)
-                .getBody();
+        Claims claims;
+        try {
+            claims = Jwts.parser()
+                    .setSigningKey(this.secret)
+                    .parseClaimsJws(token)
+                    .getBody();
+        } catch (ExpiredJwtException e) {
+            claims = e.getClaims();
+        }
+        return claims;
     }
 
     /**
