@@ -20,6 +20,7 @@ public enum ErrorCodeEnum {
     FAIL(101, "操作失败"),
     BIZ_FAIL(102, "业务处理失败"),
     BIZ_PARAM_ERR(103, "请求参数错误"),
+    EXPIRED(402, "Token已经过期"),
     FORBIDDEN(403, "没有权限"),
     SERVER_ERR(500, "内部服务器错误"),
 
